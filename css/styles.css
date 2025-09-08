@@ -1,0 +1,613 @@
+/* ------------------------------ */
+/* Reset y base */
+/* ------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #121212;
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", cursive;
+}
+
+p,
+a,
+nav,
+li {
+  font-family: "Nunito", sans-serif;
+}
+
+/* ------------------------------ */
+/* Layout principal */
+/* ------------------------------ */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ------------------------------ */
+/* Container izquierdo */
+/* ------------------------------ */
+
+.container-left {
+  width: 16%;
+  background-color: #121212;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------ */
+/* Profile Section */
+/* ------------------------------ */
+
+.profile-section {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.header img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: relative;
+  top: -40px;
+  background-color: #fff;
+}
+
+.profile-section h1 {
+  margin-top: -20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.profile-section h2 {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------ */
+/* Navbar */
+/* ------------------------------ */
+
+.nav-section {
+  width: 100%;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* Primer ítem - azul */
+.menu > li:nth-child(1) > a:hover {
+  background-color: #1f1f1f;
+  border-left: 4px solid #66a6ff;
+}
+
+/* Segundo ítem - verde */
+.menu > li:nth-child(2) > a:hover {
+  background-color: #1f1f1f;
+  border-left: 4px solid #388e3c;
+}
+
+/* Tercer ítem - amarillo */
+.menu > li:nth-child(3) > a:hover {
+  background-color: #1f1f1f;
+  border-left: 4px solid #fbc02d;
+}
+
+.menu > li > a {
+  transition: background 0.1s, border-left 0.1s;
+}
+
+.menu li:hover > .submenu {
+  display: block;
+}
+
+.menu li a i {
+  margin-right: 8px;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  max-height: 0; /* colapsado inicialmente */
+  overflow: hidden;
+  opacity: 0; /* invisible */
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Cuando el padre se hover */
+.menu li:hover > .submenu {
+  max-height: 500px; /* suficiente para mostrar todos los items */
+  opacity: 1;
+}
+
+/* Submenu items */
+.submenu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #bbbbbb;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.submenu li a:hover {
+  color: #fbc02d;
+}
+
+/* ------------------------------ */
+/* Container derecho */
+/* ------------------------------ */
+
+.container-right {
+  position: relative;
+  width: 84%;
+  padding: 48px;
+  overflow-y: auto;
+}
+
+.container-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://as1.ftcdn.net/v2/jpg/06/81/47/82/1000_F_681478236_98a7qPvUv9spO8t705Xl92Z7GHX5NFXt.jpg");
+  background-repeat: repeat;
+  filter: blur(0.2px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.container-right > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------ */
+/* Hero Section */
+/* ------------------------------ */
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  border-radius: 12px;
+  margin: 0 auto 40px auto;
+  max-width: 1024px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Fondo separado */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* aplica blur solo a la imagen */
+  z-index: 0; /* detrás del contenido */
+}
+
+/* Contenido por encima */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #ffffffaa;
+  color: #121212;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: rgba(255, 0, 0, 0.664);
+}
+
+/* ------------------------------ */
+/* Sección Nuestro Equipo */
+/* ------------------------------ */
+
+.team-preview {
+  margin-bottom: 60px;
+  background-color: #f5f5f5; /* mismo color que las cards */
+  padding: 40px 20px 60px 20px; /* espacio alrededor de título y cards */
+  border-radius: 12px; /* bordes redondeados generales */
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra ligera */
+}
+
+.team-preview h2 {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: #121212;
+  padding: 15px 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 40px auto;
+  max-width: 400px; /* opcional: que no sea muy ancho */
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-members .member {
+  max-width: 180px; /* opcional: limita tamaño */
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 170px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-members .member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.team-members .member h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #121212;
+}
+
+.team-members .member p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.team-members .member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-link {
+  text-decoration: none; /* Quita subrayado */
+  color: inherit; /* Mantiene el color del texto de la card */
+  display: inline-block; /* Se comporta como un bloque */
+}
+
+.member-link .member {
+  cursor: pointer; /* Cambia cursor al pasar el mouse */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-link .member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-members {
+    gap: 20px;
+  }
+
+  .team-members .member {
+    width: 140px;
+    padding: 15px;
+  }
+
+  .team-members .member img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ------------------------------ */
+/* Seccion de Últimos avances */
+/* ------------------------------ */
+
+.log-preview {
+  max-width: 1024px;
+  margin: 0 auto 40px auto;
+  background-color: #f5f5f5;
+  padding: 30px 20px;
+  border-radius: 12px;
+}
+
+.log-preview h2 {
+  margin-bottom: 15px;
+}
+
+.log-preview p a {
+  color: #66a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.log-preview p a:hover {
+  text-decoration: underline;
+}
+
+.log-preview code {
+  background-color: #e0e0e0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step {
+  background-color: #e9f1ff;
+  padding: 20px;
+  border-left: 5px solid #66a6ff;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-completo {
+  border-left: 5px solid #4caf50;
+}
+
+.step-desarrollo {
+  border-left: 5px solid #ff9800;
+}
+
+.step-pendiente {
+  border-left: 5px solid #f44336;
+}
+
+.step h3 {
+  margin-bottom: 10px;
+  color: #121212;
+}
+
+.step p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.step:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------ */
+/* Footer */
+/* ------------------------------ */
+
+/* Bitácora - Resumen */
+.log-summary {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log-summary h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #121212;
+}
+
+/* Bitácora - Cards */
+.log-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto 50px auto;
+  max-width: 1000px;
+  justify-content: center;
+}
+
+.log-cards .card {
+  flex: 1 1 280px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.log-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.log-cards .card h3 {
+  margin-bottom: 10px;
+  color: #121212;
+}
+
+/* Timeline estilo bloques */
+.timeline {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #121212;
+}
+
+/* Grid horizontal */
+.timeline-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Bloques estilo lego */
+.timeline-block {
+  background: #f5f5f5;
+  border: 3px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 180px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.timeline-block p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hover efecto bloque que se levanta */
+.timeline-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-block {
+    width: 100%;
+  }
+}
+
+/* juan.html */
+/* Perfil individual */
+.profile-detail {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.profile-card {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.skills {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skills-list .tag {
+  background: #ffcc00;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.contributions {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.contributions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contributions li {
+  background: #eaeaea;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.15);
+}

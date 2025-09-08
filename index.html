@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="container-left">
+        <section class="profile-section">
+          <header class="header">
+            <img src="img/banner.png" alt="Banner" />
+          </header>
+          <img
+            class="profile-pic"
+            src="https://i.pinimg.com/736x/7d/5a/4b/7d5a4b4671b048b0aa1d8bf1b1c32da3.jpg"
+            alt="Foto del grupo"
+          />
+          <h1>Grupo 4</h1>
+          <h2>Proyecto Frontend</h2>
+        </section>
+
+        <section class="nav-section">
+          <nav>
+            <ul class="menu">
+              <li>
+                <a href="#home"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li>
+                <a href="bitacora.html"><i class="fas fa-book"></i> Bitacora</a>
+              </li>
+              <li>
+                <a href="#equipo"><i class="fas fa-users"></i> Equipo</a>
+                <ul class="submenu">
+                  <li><a href="juan.html">Juan</a></li>
+                  <li><a href="#sofia">Sofia</a></li>
+                  <li><a href="#carlos">Carlos</a></li>
+                  <li><a href="#nahir">Nahir</a></li>
+                  <li><a href="#rodrigo">Rodrigo</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+
+      <div class="container-right">
+        <!-- Hero Section -->
+        <section class="hero">
+          <h1>Bienvenidos a nuestro Portfolio</h1>
+          <p class="hero-text">
+            Somos un equipo de desarolladores apasionados por crear y aprender
+            juntos.
+          </p>
+          <a href="#equipo" class="btn">Conoce al equipo</a>
+        </section>
+
+        <!-- Miniaturas del equipo -->
+        <section class="team-preview">
+          <h2>Nuestro equipo</h2>
+          <div class="team-members">
+            <a href="juan.html" class="member-link">
+              <div class="member">
+                <img
+                  src="https://randomuser.me/api/portraits/lego/4.jpg"
+                  alt="Integrante 1"
+                />
+                <h3>Juan Schallmoser</h3>
+                <p>Backend Developer</p>
+              </div>
+            </a>
+            <a href="perfil-sofia.html" class="member-link">
+              <div class="member">
+                <img
+                  src="https://randomuser.me/api/portraits/lego/9.jpg"
+                  alt="Integrante 2"
+                />
+                <h3>Sofia</h3>
+                <p>UX/UI Designer</p>
+              </div>
+            </a>
+            <a href="perfil-carlos.html" class="member-link">
+              <div class="member">
+                <img
+                  src="https://randomuser.me/api/portraits/lego/2.jpg"
+                  alt="Integrante 3"
+                />
+                <h3>Carlos</h3>
+                <p>Frontend Developer</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="member member-link">
+                <img
+                  src="https://d1m9vqlvl3fy94.cloudfront.net/role/attachment/185736/default_SkyLanePortrati2.png"
+                  alt="Integrante 4"
+                />
+                <h3>Nahir</h3>
+                <p>Project Manager</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="member member-link">
+                <img
+                  src="https://randomuser.me/api/portraits/lego/3.jpg"
+                  alt="Integrante 5"
+                />
+                <h3>Rodrigo Chico</h3>
+                <p>Full Stack Developer</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Bitácora resumen -->
+        <section class="log-preview">
+          <h2>Últimos avances</h2>
+          <div class="steps">
+            <div class="step step-completo">
+              <h3>Paso 1: Investigación</h3>
+              <p>
+                Recolección de información y análisis de requerimientos del
+                proyecto.
+              </p>
+            </div>
+            <div class="step step-completo">
+              <h3>Paso 2: Diseño</h3>
+              <p>
+                Creación de wireframes y diseño visual de la interfaz del
+                proyecto.
+              </p>
+            </div>
+            <div class="step step-desarrollo">
+              <h3>Paso 3: Desarrollo</h3>
+              <p>
+                Implementación de funcionalidades y programación del front-end y
+                back-end.
+              </p>
+            </div>
+            <div class="step step-desarrollo">
+              <h3>Paso 4: Pruebas</h3>
+              <p>Revisión, pruebas de usabilidad y corrección de errores.</p>
+            </div>
+            <div class="step step-pendiente">
+              <h3>Paso 5: Lanzamiento</h3>
+              <p>Entrega del proyecto y despliegue final.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
