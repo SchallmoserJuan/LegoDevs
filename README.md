@@ -72,5 +72,3 @@ La documentación del proceso está en la página **`bitacora.html`**, donde se 
 * Línea de tiempo (timelines)
 
 ---
-
-✍️ *Grupo 4 – Proyecto Frontend*
