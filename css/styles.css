@@ -547,6 +547,7 @@ li {
   }
 }
 
+/* ----------------------------------------------- */
 /* juan.html */
 /* Perfil individual */
 .profile-detail {
@@ -562,6 +563,12 @@ li {
   text-align: center;
   max-width: 400px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 .profile-card img {
@@ -571,18 +578,61 @@ li {
   margin-bottom: 15px;
 }
 
+/* Contenedor de la sección */
 .skills {
-  margin: 40px auto;
+  background-color: #f5f5f5;            /* cuadro blanco */
+  border-radius: 12px;               /* bordes suaves */
+  padding: 20px 30px;
+  max-width: 800px;                  /* ancho limitado */
+  margin: 30px auto;                 /* centrado */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* sombra elegante */
   text-align: center;
 }
 
+/* Título */
+.skills .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #121212;
+  border-bottom: 2px solid #eee;  /* línea sutil debajo */
+  padding-bottom: 10px;
+}
+
+/* Lista de skills */
 .skills-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
+  flex-wrap: wrap;          /* varias filas si no entran */
+  gap: 10px;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+}
+
+.skills-list .tag {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #ffd500; /* color LEGO amarillo por defecto */
+  color: #121212;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+/* Colores de hover según posición */
+.skills-list li:nth-child(1) .tag:hover { background-color: #009739; color: #fff; } /* Verde */
+.skills-list li:nth-child(2) .tag:hover { background-color: #d52834; color: #fff; } /* Rojo */
+.skills-list li:nth-child(3) .tag:hover { background-color: #0055bf; color: #fff; } /* Azul */
+.skills-list li:nth-child(4) .tag:hover { background-color: #d52834; color: #fff; } /* Rojo */
+.skills-list li:nth-child(5) .tag:hover { background-color: #009739; color: #fff; } /* Verde */
+.skills-list li:nth-child(6) .tag:hover { background-color: #0055bf; color: #fff; } /* Azul */
+
+
+/* Hover de los tags */
+.skills-list .tag:hover {
+  cursor: pointer;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .skills-list .tag {
@@ -594,20 +644,125 @@ li {
   box-shadow: 0 3px 0 rgba(0,0,0,0.2);
 }
 
-.contributions {
-  max-width: 600px;
-  margin: 0 auto 60px auto;
+/* Juan */
+/* Botón */
+/* Centrado del botón */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.contributions ul {
+/* Botón */
+.btn-info {
+  padding: 12px 24px;
+  background-color: #d52834;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-info:hover {
+  background-color: #d52834cc;
+  transform: scale(1.05);
+}
+
+/* Contenedor acordeón */
+.extra-info {
+  max-width: 1024px;
+  max-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+}
+
+.extra-info.active {
+  max-height: 1000px; /* suficiente para el contenido */
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+/* Grid en 3 columnas */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card estilo LEGO */
+.lego-card {
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover animación */
+.lego-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.3);
+}
+
+/* "Studs" arriba del bloque */
+.lego-card::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 120px; /* controla cuántos studs entran */
+  height: 20px;
+  background: transparent;
+}
+
+.lego-card::before {
+  content: "● ● ●"; /* circulitos simulando studs */
+  font-size: 18px;
+  letter-spacing: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Colores LEGO */
+.lego-blue { background-color: #0055bf; }
+.lego-yellow { background-color: #ffd500; color: #121212; }
+.lego-red { background-color: #d52834; }
+.lego-green { background-color: #009739; }
+
+
+/* Listas dentro de las tarjetas */
+.lego-card ul {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
 }
 
-.contributions li {
-  background: #eaeaea;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 3px 0 rgba(0,0,0,0.15);
+.lego-card li {
+  padding: 6px 0;
+  border-bottom: 2px dotted rgba(255,255,255,0.4);
+}
+
+.lego-yellow li {
+  border-bottom: 2px dotted rgba(0,0,0,0.4);
+}
+
+.lego-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive: columnas en móviles */
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 }

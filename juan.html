@@ -79,36 +79,87 @@
             <h2>Juan Schallmoser</h2>
             <p><i class="fas fa-code"></i> Desarrollador Backend</p>
             <p>
-              Soy estudiante de ingeniería en sistemas con pasión por el
-              desarrollo backend. Me gusta estructurar proyectos con buenas
-              prácticas y optimizar procesos.
+              <i class="fa fa-thumb-tack" aria-hidden="true"></i> Misiones,
+              Argentina
+            </p>
+            <p>
+              <i class="fa fa-birthday-cake" aria-hidden="true"></i> 24 años
+            </p>
+            <p>
+              <br />Estudiante de la
+              <strong>Tecnicatura en Desarrollo de Software</strong> con pasión
+              por el desarrollo backend y la nube. Me gusta estructurar
+              proyectos con buenas prácticas y optimizar procesos.
             </p>
           </div>
         </section>
 
         <!-- Habilidades -->
         <section class="skills">
-          <h2>Habilidades</h2>
+          <h2 class="section-title">Habilidades</h2>
           <ul class="skills-list">
             <li><span class="tag">Node.js</span></li>
             <li><span class="tag">Express</span></li>
-            <li><span class="tag">SQL</span></li>
+            <li><span class="tag">MongoDB</span></li>
             <li><span class="tag">APIs REST</span></li>
-            <li><span class="tag">Git/GitHub</span></li>
+            <li><span class="tag">AWS</span></li>
+            <li><span class="tag">Docker</span></li>
           </ul>
         </section>
 
-        <!-- Aportes -->
-        <section class="contributions">
-          <h2>Aportes al Proyecto</h2>
-          <ul>
-            <li>Diseñé la estructura de la base de datos.</li>
-            <li>Implementé la API para manejar tareas y usuarios.</li>
-            <li>Conecté el frontend con el backend.</li>
-            <li>Colaboré en la documentación técnica.</li>
-          </ul>
-        </section>
+        <!-- Botón centrado -->
+        <div class="btn-wrapper">
+          <button id="toggleInfo" class="btn-info">
+            Mostrar más información
+          </button>
+        </div>
+
+        <!-- Contenedor oculto con animación -->
+        <div id="extraInfo" class="extra-info">
+          <div class="info-grid">
+            <!-- Peliculas favoritas -->
+            <section class="favorites lego-card lego-blue">
+              <h2>Películas Favoritas</h2>
+              <ul>
+                <li>Inception</li>
+                <li>The Dark Knight</li>
+                <li>Interstellar</li>
+                <li>Parasite</li>
+              </ul>
+            </section>
+
+            <!-- Musica favorita -->
+            <section class="music lego-card lego-yellow">
+              <h2>Música Favorita</h2>
+              <ul>
+                <li>when the party's over - Billie Eilish</li>
+                <li>Driver license - Olivia Rodrigo</li>
+                <li>Labios Compartidos - Maná</li>
+              </ul>
+            </section>
+
+            <!-- Aportes -->
+            <section class="contributions lego-card lego-green">
+              <h2>Aportes al Proyecto</h2>
+              <ul>
+                <li>Diseñé la estructura de la página.</li>
+                <li>
+                  Implementé la navegación entre secciones y páginas
+                  individuales.
+                </li>
+                <li>
+                  Colaboré en la integración de estilos y diseño responsivo.
+                </li>
+                <li>
+                  Documenté el flujo de trabajo en GitHub y el README del
+                  proyecto.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
