@@ -1,3 +1,6 @@
+<img width="986" height="496" alt="image" src="https://github.com/user-attachments/assets/ac380860-64f6-4c8f-9262-3eba8181f173" />
+
+
 
 # 🚀 Proyecto Frontend – Grupo 5
 
