@@ -20,6 +20,8 @@ LegoDevs/
 │── rodrigo.html        # Perfil de Rodrigo
 │── css/
 │    └── styles.css     # Estilos globales
+│── js/
+│    └── script.js      # Funcionalidad Javascript
 │── img/                # Imágenes usadas
 └── README.md           # Documentación del proyecto
 
