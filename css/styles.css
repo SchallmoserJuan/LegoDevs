@@ -387,22 +387,6 @@ html {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .team-members {
-    gap: 20px;
-  }
-
-  .team-members .member {
-    width: 140px;
-    padding: 15px;
-  }
-
-  .team-members .member img {
-    width: 80px;
-    height: 80px;
-  }
-}
 
 /* ------------------------------ */
 /* Seccion de Últimos avances */
@@ -576,12 +560,7 @@ html {
   box-shadow: 0 12px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .timeline-block {
-    width: 100%;
-  }
-}
+
 
 /* ----------------------------------------------- */
 /* juan.html */
@@ -855,9 +834,172 @@ html {
   border-bottom: none;
 }
 
-/* Responsive: columnas en móviles */
-@media (max-width: 900px) {
-  .info-grid {
-    grid-template-columns: 1fr;
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  /* Sidebar se convierte en navbar abajo */
+  .container-left {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;  /* fijo abajo */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 10px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+
+    /* IMPORTANT: quitar sticky para mobile */
+    top: auto !important;
+    position: fixed !important;
+  }
+
+  /* Ocultar profile */
+  .profile-section {
+    display: none;
+  }
+
+  /* Menu en fila horizontal */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .menu > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    padding: 5px 0;
+  }
+
+  .menu li i {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .submenu {
+    display: none !important;
+  }
+
+  /* GitHub link oculto en mobile */
+  .github-project-link {
+    display: none;
+  }
+
+  .container-right {
+    width: 100%;
+    padding-bottom: 80px; /* espacio para navbar fijo abajo */
+  }
+
+  /* Extra info grid: mostrar tarjetas en 3 filas */
+  .extra-info .info-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* permite varias filas */
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .extra-info .lego-card {
+    width: calc(100% / 1 - 10px); /* 3 tarjetas por fila */
+    min-width: 90px; /* opcional: para que no se achique demasiado */
+    flex-grow: 1;
+  }
+
+  .extra-info {
+    padding: 15px 10px;
+    margin-top: 15px;
+  }
+}
+
+/* ------------------------------ */
+/* Tablet 769px – 1024px */
+/* ------------------------------ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .container-left {
+    width: 20%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #121212;
+  }
+
+  .profile-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav-section {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu > li > a {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+
+  .menu li i {
+    margin-right: 6px;
+    font-size: 16px;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  /* GitHub link: mantiene posición final del sidebar */
+  .github-project-link {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .container-right {
+    width: 80%;
+    padding: 30px 20px;
+  }
+
+  .extra-info .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* dos columnas en tablet */
+    gap: 15px;
+  }
+
+  .extra-info .lego-card {
+    width: 100%;
+  }
+
+  .extra-info {
+    padding: 15px 0;
+    margin-top: 15px;
+  }
+
+  .btn-wrapper {
+    margin: 15px auto;
   }
 }
