@@ -52,21 +52,6 @@ LegoDevs/
 
 ---
 
-## 📌 Notas importantes
-
-* **No trabajar directo en `main`** → siempre usar una rama para evitar conflictos.
-
-* **Actualizar antes de empezar a trabajar**:
-
-  ```bash
-  git checkout main
-  git pull origin main
-  ```
-
-* **Usar nombres claros en los commits** (ej: `"Agrego estilos a perfil de Juan"`).
-
----
-
 ## 📅 Bitácora
 
 La documentación del proceso está en la página **`bitacora.html`**, donde se registran:
