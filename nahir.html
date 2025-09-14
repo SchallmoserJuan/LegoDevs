@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Perfil de Nahir</title>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Sidebar izquierda -->
+      <div class="container-left">
+        <section class="profile-section">
+          <header class="header">
+            <img src="img/banner.png" alt="Banner" />
+          </header>
+          <img
+            class="profile-pic"
+            src="https://i.pinimg.com/736x/7d/5a/4b/7d5a4b4671b048b0aa1d8bf1b1c32da3.jpg"
+            alt="Foto del grupo"
+          />
+          <h1>Grupo 5</h1>
+          <h2>Proyecto Frontend</h2>
+        </section>
+        <section class="nav-section">
+          <nav>
+            <ul class="menu">
+              <li>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+              </li>
+              <li>
+                <a href="bitacora.html"><i class="fas fa-book"></i> Bitacora</a>
+              </li>
+              <li>
+                <a href="index.html#equipo"
+                  ><i class="fas fa-users"></i> Equipo</a
+                >
+                <ul class="submenu">
+                  <li><a href="juan.html">Juan</a></li>
+                  <li><a href="#sofia">Sofia</a></li>
+                  <li><a href="#carlos">Carlos</a></li>
+                  <li><a href="nahir.html">Nahir</a></li>
+                  <li><a href="#rodrigo">Rodrigo</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <!-- Link al proyecto en GitHub -->
+        <div
+          class="github-project-link"
+          style="text-align: center; margin-top: 2rem"
+        >
+          <a
+            href="https://github.com/SchallmoserJuan/LegoDev"
+            target="_blank"
+            class="btn github"
+          >
+            <i class="fab fa-github"></i> Ver proyecto en GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Contenido derecho -->
+      <div class="container-right">
+        <!-- Hero -->
+        <section class="hero">
+          <h1>Perfil de Nahir</h1>
+          <p class="hero-text">Backend Developer del equipo</p>
+        </section>
+
+        <!-- Info personal -->
+        <section class="profile-detail">
+          <div class="profile-card" id="profileCard">
+            <div class="card-layer">
+              <img
+                src="https://d1m9vqlvl3fy94.cloudfront.net/role/attachment/185736/default_SkyLanePortrati2.png"
+                alt="Foto de Nahir"
+              />
+            </div>
+            <h2>Nahir Icare</h2>
+            <p><i class="fas fa-code"></i>Project Manager</p>
+            <p>
+              <i class="fa fa-thumb-tack" aria-hidden="true"></i> Rio Negro,
+              Argentina
+            </p>
+            <p>
+              <i class="fa fa-birthday-cake" aria-hidden="true"></i> 31 años
+            </p>
+            <p>
+              <strong>Estudiante de la Tecnicatura en Desarrollo de Software</strong>, con foco en la planificación, organización y seguimiento de proyectos. Como Project Manager, me encargo de coordinar al equipo, organizar las tareas y asegurar que cumplamos los plazos y objetivos definidos.
+            <!-- Botones de contacto -->
+            <div class="contact-buttons">
+              <a
+                href="https://github.com/nahiricare"
+                target="_blank"
+                class="btn github"
+              >
+                <i class="fab fa-github"></i> Proyectos personales</a>
+
+              <a
+                href="https://github.com/FoxyDevSolution"
+                target="_blank"
+                class="btn github"
+              >
+                <i class="fab fa-github"></i> Proyectos Freelance</a>
+                <a
+                href="https://www.linkedin.com/in/nahiricare/"
+                target="_blank"
+                class="btn linkedin"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="skills">
+          <h2 class="section-title">Gestión de proyectos</h2>
+          <ul class="skills-list">
+            <li><span class="tag">Organización y planificación</span></li>
+            <li><span class="tag">Comunicación efectiva</span></li>
+            <li><span class="tag">Trabajo en equipo</span></li>
+            <li><span class="tag">Resolución de problemas</span></li>
+          </ul>
+        </section>
+
+        <!-- Botón centrado -->
+        <div class="btn-wrapper">
+          <button id="toggleInfo" class="btn-info">
+            Mostrar más información
+          </button>
+        </div>
+
+        <!-- Contenedor oculto con animación -->
+        <div id="extraInfo" class="extra-info">
+        <h2> Hacé click en las cartas para descubrir más</h2>
+          <div class="info-grid">
+
+        <!-- Películas -->
+        <section class="favorites flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front lego-card lego-blue">
+            <h2>Películas Favoritas</h2>
+            <ul>
+                <li>Misery</li>
+                <li>Se7en</li>
+                <li>El silencio de los inocentes</li>
+                <li>V/H/S</li>
+            </ul>
+            </div>
+            <div class="flip-card-back lego-card lego-blue">
+            <h2>Actividades Favoritas</h2>
+            <ul>
+                <li>Trekking en la montaña</li>
+                <li>Andar en Bicicleta</li>
+                <li>Ver películas</li>
+            </ul>
+
+            </div>
+        </div>
+        </section>
+
+        <!-- Música -->
+        <section class="music flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front lego-card lego-yellow">
+            <h2>Música Favorita</h2>
+            <ul>
+                <li>Iron Maiden</li>
+                <li>Megadeth</li>
+                <li>Metallica</li>
+            </ul>
+            </div>
+            <div class="flip-card-back lego-card lego-yellow">
+            <h2>Esta es mi mascota, se llama Mordelón</h2>
+            <img src="img/gato.jpg" alt="Foto de mi gato" class="cat-pic" />
+            </div>
+        </div>
+        </section>
+
+        <!-- Aportes -->
+        <section class="contributions flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front lego-card lego-green">
+            <h2>Aportes al Proyecto</h2>
+            <ul>
+                <li>Coordiné la distribución de tareas entre los integrantes.</li>
+                <li>Organicé el cronograma de entregas según los tiempos de la materia.</li>
+                <li>Supervisé la correcta aplicación de los requerimientos del TP.</li>
+                <li>Apoyé al equipo en la documentación y bitácora del proyecto.</li>
+            </ul>
+            </div>
+            <div class="flip-card-back lego-card lego-green">
+            <h2>Marca Personal 🚀</h2>
+            <p>Soy fundadora de <strong>Foxy Dev</strong>, mi marca freelance para crear soluciones digitales.</p>
+            </div>
+        </div>
+        </section>
+
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
