@@ -770,11 +770,19 @@ html {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover animación */
+
+/* Hover SOLO para lego-cards normales */
 .lego-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
 }
+
+/* Anular hover dentro de flip-cards */
+.flip-card .lego-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 
 /* "Studs" arriba del bloque */
 .lego-card::before {
@@ -1002,4 +1010,76 @@ html {
   .btn-wrapper {
     margin: 15px auto;
   }
+}
+
+
+/*Perfil nahir*/
+
+/* --- Desactivar flip 3D y usar reveal por opacity/translate --- */
+.flip-card.no-flip {
+  perspective: none;
+  height: auto;
+}
+
+.flip-card.no-flip .flip-card-inner {
+  transform: none !important;
+  transition: none !important;
+  display: grid;
+}
+
+.flip-card.no-flip .flip-card-front,
+.flip-card.no-flip .flip-card-back {
+    grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  backface-visibility: visible;
+  transform: none !important;
+  transition: opacity .35s ease, transform .35s ease, visibility .35s;
+}
+
+/* Estado inicial: front visible, back oculto */
+.flip-card.no-flip .flip-card-front {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.flip-card.no-flip .flip-card-back {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+/* Estado revelado: show back */
+.flip-card.no-flip.revealed .flip-card-front {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+.flip-card.no-flip.revealed .flip-card-back {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Limitar tamaño de las imágenes dentro de flip-cards */
+.flip-card .flip-card-back img,
+.flip-card .flip-card-front img {
+  max-width: 100%;
+  max-height: 180px; /* ajustá según el alto que quieras */
+  object-fit: contain; /* o cover si querés recorte */
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Forzar altura mínima y uniforme de las cards */
+.flip-card.no-flip {
+  min-height: 220px;  /* ajustá para que todas se vean parejas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
