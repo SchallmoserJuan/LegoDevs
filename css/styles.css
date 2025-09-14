@@ -28,6 +28,7 @@
   transform: translateY(-2px) scale(1.05);
   text-decoration: none;
 }
+
 /* ------------------------------ */
 /* Reset y base */
 /* ------------------------------ */
@@ -145,7 +146,7 @@ html {
   margin: 0;
 }
 
-.menu > li > a {
+.menu>li>a {
   display: block;
   padding: 12px 20px;
   color: white;
@@ -155,28 +156,28 @@ html {
 }
 
 /* Primer ítem - azul */
-.menu > li:nth-child(1) > a:hover {
+.menu>li:nth-child(1)>a:hover {
   background-color: #1f1f1f;
   border-left: 4px solid #66a6ff;
 }
 
 /* Segundo ítem - verde */
-.menu > li:nth-child(2) > a:hover {
+.menu>li:nth-child(2)>a:hover {
   background-color: #1f1f1f;
   border-left: 4px solid #388e3c;
 }
 
 /* Tercer ítem - amarillo */
-.menu > li:nth-child(3) > a:hover {
+.menu>li:nth-child(3)>a:hover {
   background-color: #1f1f1f;
   border-left: 4px solid #fbc02d;
 }
 
-.menu > li > a {
+.menu>li>a {
   transition: background 0.1s, border-left 0.1s;
 }
 
-.menu li:hover > .submenu {
+.menu li:hover>.submenu {
   display: block;
 }
 
@@ -187,15 +188,18 @@ html {
 .submenu {
   list-style: none;
   padding-left: 20px;
-  max-height: 0; /* colapsado inicialmente */
+  max-height: 0;
+  /* colapsado inicialmente */
   overflow: hidden;
-  opacity: 0; /* invisible */
+  opacity: 0;
+  /* invisible */
   transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
 /* Cuando el padre se hover */
-.menu li:hover > .submenu {
-  max-height: 500px; /* suficiente para mostrar todos los items */
+.menu li:hover>.submenu {
+  max-height: 500px;
+  /* suficiente para mostrar todos los items */
   opacity: 1;
 }
 
@@ -237,7 +241,7 @@ html {
   z-index: 0;
 }
 
-.container-right > * {
+.container-right>* {
   position: relative;
   z-index: 1;
 }
@@ -269,12 +273,14 @@ html {
   background-image: url("../img/bg2.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(4px); /* aplica blur solo a la imagen */
-  z-index: 0; /* detrás del contenido */
+  filter: blur(4px);
+  /* aplica blur solo a la imagen */
+  z-index: 0;
+  /* detrás del contenido */
 }
 
 /* Contenido por encima */
-.hero > * {
+.hero>* {
   position: relative;
   z-index: 1;
 }
@@ -309,13 +315,17 @@ html {
 
 .team-preview {
   margin-bottom: 60px;
-  background-color: #f5f5f5; /* mismo color que las cards */
-  padding: 40px 20px 60px 20px; /* espacio alrededor de título y cards */
-  border-radius: 12px; /* bordes redondeados generales */
+  background-color: #f5f5f5;
+  /* mismo color que las cards */
+  padding: 40px 20px 60px 20px;
+  /* espacio alrededor de título y cards */
+  border-radius: 12px;
+  /* bordes redondeados generales */
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* sombra ligera */
 }
 
 .team-preview h2 {
@@ -327,7 +337,8 @@ html {
   border-radius: 4px;
   box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
   margin: 0 auto 40px auto;
-  max-width: 400px; /* opcional: que no sea muy ancho */
+  max-width: 400px;
+  /* opcional: que no sea muy ancho */
 }
 
 .team-members {
@@ -338,7 +349,8 @@ html {
 }
 
 .team-members .member {
-  max-width: 180px; /* opcional: limita tamaño */
+  max-width: 180px;
+  /* opcional: limita tamaño */
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 12px;
@@ -372,13 +384,17 @@ html {
 }
 
 .member-link {
-  text-decoration: none; /* Quita subrayado */
-  color: inherit; /* Mantiene el color del texto de la card */
-  display: inline-block; /* Se comporta como un bloque */
+  text-decoration: none;
+  /* Quita subrayado */
+  color: inherit;
+  /* Mantiene el color del texto de la card */
+  display: inline-block;
+  /* Se comporta como un bloque */
 }
 
 .member-link .member {
-  cursor: pointer; /* Cambia cursor al pasar el mouse */
+  cursor: pointer;
+  /* Cambia cursor al pasar el mouse */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -629,12 +645,17 @@ html {
 
 /* Contenedor de la sección */
 .skills {
-  background-color: #f5f5f5; /* cuadro blanco */
-  border-radius: 12px; /* bordes suaves */
+  background-color: #f5f5f5;
+  /* cuadro blanco */
+  border-radius: 12px;
+  /* bordes suaves */
   padding: 20px 30px;
-  max-width: 800px; /* ancho limitado */
-  margin: 30px auto; /* centrado */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* sombra elegante */
+  max-width: 800px;
+  /* ancho limitado */
+  margin: 30px auto;
+  /* centrado */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* sombra elegante */
   text-align: center;
 }
 
@@ -643,7 +664,8 @@ html {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #121212;
-  border-bottom: 2px solid #eee; /* línea sutil debajo */
+  border-bottom: 2px solid #eee;
+  /* línea sutil debajo */
   padding-bottom: 10px;
 }
 
@@ -653,7 +675,8 @@ html {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; /* varias filas si no entran */
+  flex-wrap: wrap;
+  /* varias filas si no entran */
   gap: 10px;
   justify-content: center;
 }
@@ -661,7 +684,8 @@ html {
 .skills-list .tag {
   display: inline-block;
   padding: 8px 15px;
-  background-color: #ffd500; /* color LEGO amarillo por defecto */
+  background-color: #ffd500;
+  /* color LEGO amarillo por defecto */
   color: #121212;
   font-weight: bold;
   border-radius: 20px;
@@ -672,27 +696,39 @@ html {
 .skills-list li:nth-child(1) .tag:hover {
   background-color: #009739;
   color: #fff;
-} /* Verde */
+}
+
+/* Verde */
 .skills-list li:nth-child(2) .tag:hover {
   background-color: #d52834;
   color: #fff;
-} /* Rojo */
+}
+
+/* Rojo */
 .skills-list li:nth-child(3) .tag:hover {
   background-color: #0055bf;
   color: #fff;
-} /* Azul */
+}
+
+/* Azul */
 .skills-list li:nth-child(4) .tag:hover {
   background-color: #d52834;
   color: #fff;
-} /* Rojo */
+}
+
+/* Rojo */
 .skills-list li:nth-child(5) .tag:hover {
   background-color: #009739;
   color: #fff;
-} /* Verde */
+}
+
+/* Verde */
 .skills-list li:nth-child(6) .tag:hover {
   background-color: #0055bf;
   color: #fff;
-} /* Azul */
+}
+
+/* Azul */
 
 /* Hover de los tags */
 .skills-list .tag:hover {
@@ -729,6 +765,8 @@ html {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  margin: 20px auto;
+  display: block;
 }
 
 .btn-info:hover {
@@ -746,7 +784,8 @@ html {
 }
 
 .extra-info.active {
-  max-height: 1000px; /* suficiente para el contenido */
+  max-height: 1000px;
+  /* suficiente para el contenido */
   margin-top: 20px;
   padding: 20px 0;
 }
@@ -795,13 +834,15 @@ html {
   justify-content: center;
   gap: 10px;
   width: 100%;
-  max-width: 120px; /* controla cuántos studs entran */
+  max-width: 120px;
+  /* controla cuántos studs entran */
   height: 20px;
   background: transparent;
 }
 
 .lego-card::before {
-  content: "● ● ●"; /* circulitos simulando studs */
+  content: "● ● ●";
+  /* circulitos simulando studs */
   font-size: 18px;
   letter-spacing: 10px;
   color: rgba(255, 255, 255, 0.7);
@@ -811,13 +852,16 @@ html {
 .lego-blue {
   background-color: #0055bf;
 }
+
 .lego-yellow {
   background-color: #ffd500;
   color: #121212;
 }
+
 .lego-red {
   background-color: #d52834;
 }
+
 .lego-green {
   background-color: #009739;
 }
@@ -1012,6 +1056,83 @@ html {
   }
 }
 
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.block {
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 12px;
+  margin: 50px 0;
+  /* ⬅️ le damos más espacio arriba y abajo */
+  padding: 20px;
+  box-shadow: 4px 4px 0px #ccc;
+  position: relative;
+}
+
+.block h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #e30613;
+}
+
+/* estilo LEGO: círculo en la parte superior */
+.block::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #ffcc00;
+  border: 3px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: 20px;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin: 8px 0;
+  padding: 8px;
+  background: #e6f7ff;
+  border-left: 5px solid #007acc;
+}
+
+.objetivos {
+  list-style: none; /* quitamos los puntos por defecto */
+  padding: 0;
+}
+
+.objetivos li {
+  margin: 8px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.objetivos li::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #ffcc00;  /* color LEGO amarillo */
+  border: 2px solid #333;
+  border-radius: 50%;   /* círculo */
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.block {
+  transition: transform 0.2s ease;
+}
+
+.block:hover {
+  transform: translateY(-10px);
+=======
 
 /*Perfil nahir*/
 

@@ -70,3 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+//rodrigo//
+function cambiarColores() {
+  const colores = ["#ffeb3b", "#4caf50", "#2196f3", "#f44336", "#ff9800"];
+  const bloques = document.querySelectorAll(".block");
+  bloques.forEach(b => {
+    const randomColor = colores[Math.floor(Math.random() * colores.length)];
+    b.style.background = randomColor;
+  });
+}
+//rodrigo//
+document.querySelectorAll(".block").forEach(bloque => {
+  bloque.addEventListener("mouseenter", () => {
+    console.log("¡Encastraste un bloque LEGO!");
+  });
+});
