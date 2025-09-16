@@ -89,3 +89,92 @@ document.querySelectorAll(".block").forEach(bloque => {
     console.log("¡Encastraste un bloque LEGO!");
   });
 });
+
+
+//Carlos//
+document.addEventListener('DOMContentLoaded', () => {
+            const modelViewer = document.querySelector('#orbit-demo');
+            const sections = document.querySelectorAll('.section');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            // Ocultar indicador de scroll después de comenzar a desplazarse
+            let scrollStarted = false;
+            
+            // Definir las posiciones orbitales para cada sección
+            const orbitPositions = [
+                '-40deg 100deg 0m',    // Perfil
+                '60deg 80deg 0m',     // Contacto
+                '120deg 60deg 0m',    // Habilidades
+                '180deg 80deg 0m',    // Descripción 2
+                '240deg 100deg 0m',   // Descripción 3
+                '-40deg 100deg 0m',    // Descripción 4
+            ];
+            
+            // Configurar GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animación de aparición para las secciones
+            sections.forEach((section, index) => {
+                gsap.to(section, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse",
+                        onEnter: () => {
+                            section.classList.add('active');
+                            
+                            // Cambiar la órbita de la cámara según la sección
+                            if (index < orbitPositions.length) {
+                                gsap.to(modelViewer, {
+                                    duration: 2,
+                                    ease: "power2.inOut",
+                                    onUpdate: function() {
+                                        modelViewer.cameraOrbit = orbitPositions[index];
+                                    }
+                                });
+                            }
+                        },
+                        onLeave: () => {
+                            section.classList.remove('active');
+                        },
+                        onEnterBack: () => {
+                            section.classList.add('active');
+                            
+                            // Cambiar la órbita de la cámara al volver
+                            if (index < orbitPositions.length) {
+                                gsap.to(modelViewer, {
+                                    duration: 2,
+                                    ease: "power2.inOut",
+                                    onUpdate: function() {
+                                        modelViewer.cameraOrbit = orbitPositions[index];
+                                    }
+                                });
+                            }
+                        },
+                        onLeaveBack: () => {
+                            section.classList.remove('active');
+                        }
+                    }
+                });
+            });
+            
+            // Ocultar indicador de scroll después de comenzar a desplazarse
+            window.addEventListener('scroll', () => {
+                if (!scrollStarted) {
+                    scrollStarted = true;
+                    gsap.to(scrollIndicator, {
+                        opacity: 0,
+                        duration: 0.5,
+                        onComplete: () => {
+                            scrollIndicator.style.display = 'none';
+                        }
+                    });
+                }
+            });
+            ;   
+        });
