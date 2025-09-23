@@ -1527,3 +1527,45 @@ model-viewer {
     left: 50%;
   }
 }
+/*nuevo*/
+/* Estilos generales para las secciones extra */
+.seccion-extra {
+  margin: 40px 0;
+}
+
+.seccion-extra h2 {
+  text-align: center;
+  color: #e30613;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de grilla para todas las tarjetas */
+.tarjetas {
+  display: grid;
+  /* Configura la grilla para tener 3 columnas de igual tamaño */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espacio entre las tarjetas */
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Estilo individual de cada tarjeta */
+.tarjeta {
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 4px 4px 0px #ccc;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
